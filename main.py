@@ -4,6 +4,7 @@ import torchvision.transforms as transforms
 from torch.utils.data import random_split
 from torchvision.datasets import ImageFolder
 
+import sys 
 from PIL import Image
 import torchvision.transforms as transforms
 
@@ -77,4 +78,5 @@ def predict(image_location):
 
   print("The model predicts " + str(prediction.item()))  # Print the predicted class
 
-predict("handwritingtest1.png")
+image = sys.argv[1]
+predict(image)
